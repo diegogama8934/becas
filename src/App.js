@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import Recuperar from './app/Pages/Recuperar';
+import Ingresar from './app/Pages/Ingresar'
+import React from 'react';
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+  } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <div>
+        <Routes>
+          {/* <Route exact path="/Login">
+            <Login />
+          </Route> */}
+          <Route exact path="/" element={<Recuperar/>}/>
+          <Route exact path="/recuperar" element={<Recuperar/>}/>
+          <Route exact path="/ingresar" element={<Ingresar/>}/>
+          <Route render={() => <h1>Not found!</h1>} />
+        </Routes>
+      </div>
+      </Router>
     </div>
   );
 }
 
-export default App;
+export default App;
