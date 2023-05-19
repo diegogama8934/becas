@@ -14,6 +14,8 @@ const navigate = useNavigate();
 
     const handleClick = (id, name) => {
         // navigate('/editar', {state: {id:id, name: name}});
+        // navigate('/ingresar');
+        navigate('/ingresar');
     }
     
 
@@ -42,20 +44,10 @@ const navigate = useNavigate();
 
   return (
     <div>
-        <div className="login">
-        <img className="img-login" src={logo} alt="Logo-UAQ"/>
-        <h1>Recuperar contraseña</h1>
-        <div className="left-label">
-            <label for="">Nueva contraseña</label>
-        </div>
-        <input type="password"/>
-        <div class="left-label">
-            <label for="">Repetir contraseña</label>
-        </div>
-        <input type="password"/>
-        <button>Actualizar contraseña</button>
-    </div>
-    <img class="img-background"src={logo} alt="Logo UAQ"/>
+        <h1>Welcome to my app</h1>
+        <button onClick={handleClick}>
+        I'm a button
+        </button>
     </div>
   );
 }
